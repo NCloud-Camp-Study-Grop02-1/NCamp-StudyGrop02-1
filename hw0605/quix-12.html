@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품 주문서</title>
+    <style>
+        #container { 
+            width:520px;
+            border:1px solid black;
+            padding:20px 40px;
+            margin:0 auto;
+        }
+    fieldset { margin-bottom:15px; }
+    legend { font-weight:bold; }
+        ul {list-style-type: none;}
+        li { line-height:30px;}
+    label{
+        display: inline-block;
+        width: 90px;
+        vertical-align: top; /* 라벨을 상단에 정렬,해당 명령어를 안주면 "메모"문구가 text란의 마지막 줄에 맞춰서 정렬됨; */
+    }
+    div{
+        /* 마지막에 있는 주문하기,다시작성 버튼을 div절로 주고 css를 이용하여 가운데 정렬 */
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+    <h1>상품 주문서</h1>
+    <form>
+        <fieldset>
+            <legend style="color: rgb(157, 70, 239);">개인정보</legend>
+            <ul>
+                <li>
+                    <label for="name"><b>이름</b></label>
+                    <input type="text" placeholder="여백없이 입력">
+                </li>
+                <li>
+                    <label for="telNum"><b>연락처</b></label>
+                    <input type="tel" placeholder="연락가능한 번호">
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend style="color: rgb(157, 70, 239);">배송지 정보</legend>
+            <ul>
+                <li>
+                    <label for="adr"><b>주소</b></label>
+                    <input type="text">
+                </li>
+                <li>
+                    <label for="telNum"><b>전화번호</b></label>
+                    <input type="tel">
+                </li>
+                <li>
+                    <label for="memo"><b>메모</b></label>
+                    <textarea name="memo" id="memo" rows="4" cols="60"></textarea>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend style="color: rgb(157, 70, 239);">주문 정보</legend>
+            <ul>
+                <li>
+                    <input type="checkbox">과테말라 안티구아(100g)
+                    <input type="text" value="0" style="width: 40px;">개
+                </li>
+                <li>
+                    <input type="checkbox">인도네시아 만델링(100g)
+                    <input type="text" value="0" style="width: 40px;">개
+                </li>
+                <li>
+                    <input type="checkbox">탐라는도다(블렌딩)(100g)
+                    <input type="text" value="0" style="width: 40px;">개
+                </li>
+            </ul>
+        </fieldset>
+        <div>
+            <input type="submit" value="주문하기">
+            <input type="reset" value="다시작성">
+        </div>
+    </form>
+</body>
+</html>
