@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>짝수일까, 홀수일까</title>    
+</head>
+<body>
+    <script>
+        const num = window.prompt("숫자를 입력하시오.");
+        num1 = parseInt(num);
+        const Str = `<h1 style = "text-align: center";>짝수일까, 홀수일까</h1>`
+        document.write(Str);
+        if(num1 %2 == 0){
+        document.write(`<h4 style = "text-align: center";>${num}는 짝수입니다.</h2>`);
+        } else {
+            document.write(`<h4 style = "text-align: center";>${num}는 홀수입니다.</h2>`);    
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3의 배수 찾기</title>
+    <style>
+        .box{
+            width: 500px;
+            height: 200px;
+            border: 2px solid #000;
+            text-align: center;
+            flex-direction: column;
+            white-space: normal; /* 자동 줄바꿈 */
+            word-wrap: break-word; /* 단어가 길 때 줄바꿈 */
+         
+        }
+    </style>    
+</head>
+<body>
+    <div class="box">
+        <script>
+            let cnt = 0;
+            document.write(`<h1>3의 배수찾기</h1>`);
+
+            for(let i = 1; i <= 100; i++){
+                if(i % 3 == 0){ 
+                    document.write(`${i} ,`);
+                    cnt++
+                }
+            }
+            document.write(`<br></br>`);
+            document.write(`3의 배수의 갯수 : ${cnt}`)
+        </script>
+        </div>
+</body>
+</html>
