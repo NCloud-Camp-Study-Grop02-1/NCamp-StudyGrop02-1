@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = [];
+        const leng = window.prompt("입력할 배열의 길이를 입력하세요");
+
+        for(let i = 0; i<leng; i++){
+            let ele = window.prompt(`${i+1}번째 배열을 입력하세요`);
+            arr.push(parseInt(ele));
+        }
+        let sum=0;
+        for(let element of arr) {
+            sum+=element;
+        }
+        alert(`배열 합은 ${sum}입니다.`);
+    </script>
+</body>
+</html>
