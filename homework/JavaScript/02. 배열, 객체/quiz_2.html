@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let lotto_arr = [];
+        let user_input = [];
+
+        let randomNum = Math.floor(Math.random() * 45) + 1;
+
+        for(let j = 1; j <= 7; j++){
+            if(!lotto_arr.includes(randomNum)){
+                // console.log('배열에 넣을 값 : ' + randomNum);
+                lotto_arr.push(randomNum);
+            } else {
+                randomNum = Math.floor(Math.random() * 45) + 1;
+                j--;
+            }
+        }
+
+        let lotto_six = "";
+        for(let k = 0; k < lotto_arr.length - 1; k++){
+            lotto_six += lotto_arr[k] + ", ";
+        }
+
+        for(let i = 1; i <= 6; i++){
+            let inputNum = prompt('1~45까지의 숫자를 입력하세요.');
+            if(!user_input.includes(inputNum)){
+                if(inputNum <= 45){
+                    user_input.push(inputNum);
+                } else {
+                    alert('45보다 큰 숫자는 입력할 수 없습니다. 1~45까지의 숫자를 다시 입력하세요.');
+                    i--;
+                    continue;
+                }
+            } else {
+                alert('중복된 숫자 값이 있습니다. 1~45까지의 숫자를 다시 입력하세요.');
+                i--;
+                continue;
+            }
+            console.log(user_input);
+        }
+
+        let user_six = "";
+        for(let m = 0; m < user_input.length; m++){
+            if(m != user_input.length - 1){
+                user_six += user_input[m] + ", ";
+            } else {
+                user_six += user_input[m];
+            }
+        }
+
+        let sameNumCnt = 0;
+        for(let n = 0; n < user_input.length; n++){
+            if(lotto_arr[n] == user_input[n]){
+                sameNumCnt++;
+            }
+        }
+        console.log('이번주 로또 당첨 번호는 : ' + lotto_six + '보너스번호 : ' + lotto_arr[lotto_arr.length - 1]);
+        console.log('구입한 로또 번호: ' + user_six);
+        if(sameNumCnt == 6){
+            console.log("당첨되셨습니다!!");
+        } else {
+            console.log(sameNumCnt + "개 맞추셨습니다. 꽝!");
+        }
+
+        // lotto_arr = [];
+        // user_input = [];
+    </script>
+</body>
+</html>
