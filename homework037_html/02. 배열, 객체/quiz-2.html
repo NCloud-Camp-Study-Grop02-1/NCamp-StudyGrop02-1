@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz-2</title>
+</head>
+<body>
+    <p id="text"></p>
+    <p id="purchase"></p>
+    <p id="result"></p>
+    <script>
+        let count = 0;
+        let bonusCnt = 0;
+        let userarr = [0, 0, 0, 0, 0, 0];
+
+        // let bonus = 0;
+        // let arr = [0, 0, 0, 0, 0, 0];
+
+        let bonus = 7;
+        let arr = [1, 2, 3, 4, 5, 6];
+        
+        // 구매한 로또번호
+        for(let i = 0; i < userarr.length; i++){
+            let userStr = prompt("1~45까지의 숫자를 입력하세요.");
+            userarr[i] = parseInt(userStr);
+        }
+
+        // // 당첨 번호
+        // for(let i = 0; i < arr.length; i++){
+        //     arr[i] = Math.floor(Math.random()*45) + 1;
+        //     bonus = Math.floor(Math.random()*45) + 1;
+        //     for(let j = 0; j < i; j++){
+        //         if(arr[i] == arr[j]){
+        //             i--;
+        //             break;
+        //         }
+        //     }
+        //     for(let j = 0; j < arr.length; j++){
+        //         if(arr[i] == bonus){
+        //             bonus = Math.floor(Math.random()*45) + 1;
+        //             break;
+        //         }
+        //     }
+        // }
+
+        const text = document.getElementById("text");
+        const purchase = document.getElementById("purchase");
+        const result = document.getElementById("result");
+
+        text.innerHTML = `이번주 로또 당첨 번호는 : ${arr[0]}, ${arr[1]}, ${arr[2]}, ${arr[3]}, ${arr[4]}, ${arr[5]}, 보너스번호 : ${bonus}`;
+        purchase.innerHTML = `구입한 로또 번호 : ${userarr[0]}, ${userarr[1]}, ${userarr[2]}, ${userarr[3]}, ${userarr[4]}, ${userarr[5]}`;
+
+        arr.sort();
+        userarr.sort();
+        for(let i = 0; i < userarr.length; i++){
+            if(arr[i] == userarr[i]) {
+                count++;
+            }
+            if(userarr[i] == bonus) {
+                count++;
+                bonusCnt++;
+            }
+        }
+
+        // 5등이 안나오는 이유가 대체 뭔데????????????????
+        // count가 1이 나옵니다...
+        if(count == 3) {
+            result.innerHTML = "5등 당첨!";
+        }
+        // 이 밑에는 잘 된다구요!!!!!!!!!!!!!!!!!!!!!!
+        else if(count == 4) {
+            result.innerHTML = "4등 당첨!";
+        }
+        else if(count == 5 && bonusCnt == 0) {
+            result.innerHTML = "3등 당첨!";
+        }
+        else if(count == 5 && bonusCnt == 1) {
+            result.innerHTML = "2등 당첨!";
+        }
+        else if(count == 6) {
+            result.innerHTML = "1등 당첨!";
+        }
+        else {
+            result.innerHTML = "꽝!";
+        }
+
+    </script>
+</body>
+</html>
