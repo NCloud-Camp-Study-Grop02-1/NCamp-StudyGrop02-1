@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const num = window.prompt("1~45까지의 숫자를 입력하세요.");
+    const lotto = [];
+		
+    for(let i = 0; i < 7; i++) {
+            lotto.push(Math.floor(Math.random() * 45) + 1);
+    }
+
+		for(let i = 0; i < lotto.length; i++) {
+      if(i == lotto.length - 1) {
+        document.write("이번주 로또 당첨번호는 ");
+				console.log("보너스 번호: " + lotto[i]);
+			} else {
+        console.log("꽝!");
+      }
+		}
+    </script>
+</body>
+</html>
