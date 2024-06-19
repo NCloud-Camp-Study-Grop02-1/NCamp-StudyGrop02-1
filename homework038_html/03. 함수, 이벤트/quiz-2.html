@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz-2</title>
+</head>
+<body>
+    <script>
+        const usernum1 = prompt("비교할 첫 번째 숫자: ");
+        const usernum2 = prompt("비교할 두 번째 숫자: ");
+
+        function compare(usernum1, usernum2) {
+            if(usernum1 > usernum2) {
+                alert(`${usernum1}(이)가 ${usernum2}보다 큽니다.`);
+            }
+            else {
+                alert(`${usernum2}(이)가 ${usernum1}보다 큽니다.`);
+            }
+        }
+
+        compare(usernum1, usernum2);
+    </script>
+</body>
+</html>
