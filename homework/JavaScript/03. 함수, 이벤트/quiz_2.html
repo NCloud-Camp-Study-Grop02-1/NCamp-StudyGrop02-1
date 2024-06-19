@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        window.addEventListener("load", function(){
+            let num1 = prompt('비교할 첫 번째 숫자');
+            let num2 = prompt('비교할 두 번째 숫자');
+
+            compareNumber(num1, num2);
+        });
+
+        function compareNumber(num1, num2){
+    
+            if(num1 > num2){
+                alert(`${num1}(이)가 ${num2}보다 큽니다.`);
+                return;
+            } else if(num2 > num1){
+                alert(`${num2}(이)가 ${num1}보다 큽니다.`);
+                return;
+            } else {
+                alert(`${num1}와 ${num2}는 같습니다.`);
+                return;
+            }
+        }
+    </script>
+</body>
+</html>
