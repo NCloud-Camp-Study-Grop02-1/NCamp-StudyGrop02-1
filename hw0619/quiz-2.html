@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const bigNum = (a,b) => {
+            const num1 = window.prompt("비교할 첫 번째 숫자: ");
+            const num2 = window.prompt("비교할 두 번째 숫자: ");
+            if(num1<num2){
+                window.alert(`${num2}가 ${num1}보다 큽니다`);
+            }else{
+                window.alert(`${num1}가 ${num2}보다 큽니다`);
+            }
+        };
+
+        console.log(bigNum());
+    </script>
+</body>
+</html>
