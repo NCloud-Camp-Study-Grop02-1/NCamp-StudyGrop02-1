@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz-3</title>
+    <style>
+        *{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>짝수일까, 홀수일까</h1>
+    <script>
+        const userNum = parseInt(prompt("숫자를 입력하세요."));
+
+        if(userNum % 2 == 0) {
+            document.write(`<p>${userNum}는 짝수입니다.</p>`)
+        }
+        else {
+            document.write(`<p>${userNum}는 홀수입니다.</p>`)
+        }
+    </script>
+</body>
+</html>
